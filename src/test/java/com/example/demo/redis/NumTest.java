@@ -27,7 +27,25 @@ public class NumTest {
             sb.append(" \"[{'win_id':1000000,'prizeInx':0,'ticketCode':'72345678','memberId':'100019466301',}]\" ");
             sb.append("\n");
         }
-        writeNIO(sb.toString(),"husd.lst");
+        writeNIO(sb.toString(), "husd.lst");
+    }
+
+    @Test
+    public void test2() throws IOException {
+
+        int max = 1000000;
+        //int max = 10;
+        StringBuilder sb = new StringBuilder(50 * max);
+        long a = 82603568L;
+        for (int i = 0; i < max; i++) {
+            sb.append("set e5:AC_TICKET_20201111_");
+            sb.append(a + i);
+            sb.append(" \"334732_2020-10-28 16:08:12\"");
+            sb.append("\n");
+        }
+        long b = 10;
+        long c = a++ + b;
+        writeNIO(sb.toString(), "husd2.lst");
     }
 
     /**
