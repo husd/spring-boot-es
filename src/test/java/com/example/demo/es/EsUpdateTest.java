@@ -1,7 +1,8 @@
-package com.example.demo;
+package com.example.demo.es;
 
-import com.example.demo.listener.DeleteIndexListener;
-import org.elasticsearch.action.delete.DeleteRequest;
+import com.example.demo.DemoApplicationTests;
+import com.example.demo.listener.UpdateIndexListener;
+import org.elasticsearch.action.update.UpdateRequest;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.junit.Test;
@@ -16,13 +17,13 @@ import java.util.Map;
  *
  * @author hushengdong
  */
-public class EsDeleteTest extends DemoApplicationTests {
+public class EsUpdateTest extends DemoApplicationTests {
 
     @Autowired
     private RestHighLevelClient restHighLevelClient;
 
     @Autowired
-    private DeleteIndexListener deleteIndexListener;
+    private UpdateIndexListener updateIndexListener;
 
     @Test
     public void testQuery() throws IOException {
@@ -32,11 +33,10 @@ public class EsDeleteTest extends DemoApplicationTests {
         String index_id = "12345";
         //这个是ES中数据对应的map
         Map<String, String> valueMap = new HashMap<>();
-        DeleteRequest delRequest = new DeleteRequest(index, type, index_id);
-        //这种是异步的删除
-        // restHighLevelClient.deleteAsync(delRequest, RequestOptions.DEFAULT, deleteIndexListener);
-        //这个是同步的删除
-        restHighLevelClient.delete(delRequest, RequestOptions.DEFAULT);
+        UpdateRequest request = new UpdateRequest(index, type, index_id)
+                .doc(valueMap);
+        //restHighLevelClient.updateAsync(request, RequestOptions.DEFAULT, updateIndexListener);
+        restHighLevelClient.update(request, RequestOptions.DEFAULT);
     }
 
 }

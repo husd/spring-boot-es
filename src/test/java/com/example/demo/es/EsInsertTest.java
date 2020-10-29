@@ -1,5 +1,6 @@
-package com.example.demo;
+package com.example.demo.es;
 
+import com.example.demo.DemoApplicationTests;
 import com.example.demo.listener.AddIndexListener;
 import com.example.demo.listener.BulkIndexListener;
 import org.elasticsearch.action.bulk.BulkRequest;

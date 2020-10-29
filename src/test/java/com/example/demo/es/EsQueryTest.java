@@ -1,5 +1,6 @@
-package com.example.demo;
+package com.example.demo.es;
 
+import com.example.demo.DemoApplicationTests;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;
