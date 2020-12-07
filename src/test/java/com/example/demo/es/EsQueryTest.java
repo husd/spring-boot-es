@@ -1,6 +1,6 @@
 package com.example.demo.es;
 
-import com.example.demo.DemoApplicationTests;
+import com.example.demo.BaseTest;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;
@@ -40,7 +40,7 @@ import java.util.concurrent.TimeUnit;
  *
  * @author hushengdong
  */
-public class EsQueryTest extends DemoApplicationTests {
+public class EsQueryTest extends BaseTest {
 
     @Autowired
     private RestHighLevelClient restHighLevelClient;

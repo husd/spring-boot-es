@@ -1,6 +1,6 @@
 package com.example.demo.es;
 
-import com.example.demo.DemoApplicationTests;
+import com.example.demo.BaseTest;
 import com.example.demo.listener.UpdateIndexListener;
 import org.elasticsearch.action.update.UpdateRequest;
 import org.elasticsearch.client.RequestOptions;
@@ -17,7 +17,7 @@ import java.util.Map;
  *
  * @author hushengdong
  */
-public class EsUpdateTest extends DemoApplicationTests {
+public class EsUpdateTest extends BaseTest {
 
     @Autowired
     private RestHighLevelClient restHighLevelClient;

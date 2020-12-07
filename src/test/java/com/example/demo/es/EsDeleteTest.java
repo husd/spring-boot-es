@@ -1,6 +1,6 @@
 package com.example.demo.es;
 
-import com.example.demo.DemoApplicationTests;
+import com.example.demo.BaseTest;
 import com.example.demo.listener.DeleteIndexListener;
 import org.elasticsearch.action.delete.DeleteRequest;
 import org.elasticsearch.client.RequestOptions;
@@ -17,7 +17,7 @@ import java.util.Map;
  *
  * @author hushengdong
  */
-public class EsDeleteTest extends DemoApplicationTests {
+public class EsDeleteTest extends BaseTest {
 
     @Autowired
     private RestHighLevelClient restHighLevelClient;

@@ -1,6 +1,6 @@
 package com.example.demo.es;
 
-import com.example.demo.DemoApplicationTests;
+import com.example.demo.BaseTest;
 import com.example.demo.listener.AddIndexListener;
 import com.example.demo.listener.BulkIndexListener;
 import org.elasticsearch.action.bulk.BulkRequest;
@@ -19,7 +19,7 @@ import java.util.Map;
  *
  * @author hushengdong
  */
-public class EsInsertTest extends DemoApplicationTests {
+public class EsInsertTest extends BaseTest {
 
     @Autowired
     private RestHighLevelClient restHighLevelClient;
